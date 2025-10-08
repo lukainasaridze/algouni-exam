@@ -1,5 +1,5 @@
 from fastapi.testclient import TestClient
-from main import app  # შეცვალე "main" შენი main.py-ის მოდულის სახელით
+from ..main import app  # ორი წერტილი, რადგან tests ძირეულიდან ერთი დონით ქვემოთაა
 
 client = TestClient(app)
 
