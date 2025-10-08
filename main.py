@@ -12,9 +12,9 @@ def is_valid(pl: str) -> bool:
     plate = pl.strip()
     if not len(plate) == 9:
         return False
-    if not (plate[:2].isalpha() and plate[7:].isalpha()):
+    if not (plate[:2].isalpha() and plate[7:9].isalpha()):  # Fixed: plate[7:9]
         return False
-    if not (plate[:2].isupper() and plate[7:].isupper()):
+    if not (plate[:2].isupper() and plate[7:9].isupper()):  # Fixed: plate[7:9]
         return False
     if not (plate[2] == '-' and plate[6] == '-'):
         return False
